@@ -23,10 +23,61 @@ a{
 
 
 body {
+  background-repeat: no-repeat;
   margin: 0;
+  background-image:url(../img/background.jpg);
+  background-size: cover;
 }
 
 img {
   width: 100%;
   height: auto;
+}
+
+.container{
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 200px;
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  margin-bottom: 100px;
+  -webkit-background-clip: text;
+ background-image: url('../img/back.png');
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+  transition: 1s ease;
+}
+
+@keyframes back{
+  100%{
+    background-position: 3000px 0;
+  }
+}
+
+h1:hover{
+  transform: scale(1.1);
+  z-index: 2;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  width: 100px;
+  margin-left: 20px;
+  transition: 1s ease;
+}
+
+ul li:hover{
+  transform: scale(1.4);
+  z-index: 2;
 }
